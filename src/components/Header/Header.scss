@@ -1,10 +1,17 @@
-@use "../partials/variables" as *;
+@use "../../styles/partials/variables" as *;
 // @use "./partials/typography" as *;
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+
+
+
+
+
+
 .header {
     @include tablet{
         display:flex;

@@ -1,0 +1,15 @@
+.main__comments-image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.main__comments-button {
+  background-color: #0095ff;
+  color: white;
+  border: none;
+  width: 70%;
+  flex: 1;
+}
+.button-div {
+  height: 5vh;
+}/*# sourceMappingURL=RestOfVideo.css.map */

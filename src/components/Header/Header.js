@@ -2,7 +2,7 @@ import logo from "../../assets/Logo/BrainFlix-logo.svg";
 
 import potrait from "../../assets/Images/Mohan-muruge.jpg"
 
-import "../../styles/partials/navigation.css";
+import "./Header.scss";
 function navigation() {
   return (
     <header className="header">
