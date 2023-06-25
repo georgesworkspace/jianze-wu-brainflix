@@ -1,20 +1,292 @@
+@use "../../styles/partials/variables" as *;
 .main{
-&__comments-image {
+  &__title--bold{
+    font-size: 2.4rem;
+    font-family: "Avenir bold";
+    border-bottom:1px #E1E1E1;
+  }
+  &__title-content{
+    font-family: "Avenir bold";
+    border-bottom:1px black;
+  }
+  &__video-detail{
+    display: flex;
+    justify-content: space-around;
+    margin-right:5vw;
+  }
+  &__subtitle{
+    font-size:1rem;
+    font-family: "Avenir regular";
+  }
+  &__views{
+font-size: 1.2rem;
+  }
+  &__likes{
+    font-size: 1.2rem;
+  }
+  &__date{
+    font-family: "Avenir regular";
+    color:#afafaf;
+    font-size:1.2rem;
+    
+  }
+  &__viewbar{
+  font-size:1rem;
+  font-family: "Avenir regular";
+  color:#afafaf;
+  }
+  &__likes-div{
+    display: flex;
+  }
+  &__views-div{
+    display: flex;
+  }
+}
+.comments{
+&__image {
     width: 3rem;
     height:3rem;
     border-radius: 50%;
 }
-&__comments-button{
+&__button{
     background-color: #0095ff;
     color:white;
     border:none;
-    width:70%;   
-    flex:1;
+    width:50%;  
+    margin-left:30%; 
+    height:40px;
 }
-&__comments-label{
-
+&__label{
+color: #afafaf;
+font-family: "Avenir bold";
 }
 }
 .button-div{
     height:5vh;
 }
+.form {
+    display: flex;
+    flex-direction: column;
+     margin-left: 5vw;
+    border-bottom: 1px solid #afafaf;
+    padding-bottom: 5vh;
+    margin-right:5vw;
+    
+    &__image {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      margin-right: 2vw;
+      @include tablet{
+        width:5rem;
+        height:5rem;
+      }
+    }
+  
+    &__username-input {
+  
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    &__username {
+      border-radius: 4px;
+      height: 5vh;
+      border: 1px solid #afafaf;
+      background-color: #E1E1E1;
+      color: BLACK;
+      display: flex;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      @include desktop {
+        width: 70%;
+      }
+  
+      &::placeholder {
+        color: #323232;
+        text-align: 1% 1%
+      }
+    }
+  
+    &__input-text {
+      border-radius: 4px;
+      height: 15vh;
+      border: 1px solid #afafaf;
+      background-color: #E1E1E1;
+      color: #323232;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      flex:1;
+  
+      @include desktop {
+        width: 70%
+      }
+  
+      &::placeholder {
+        color: #323232;
+        text-align: left start;
+      }
+    }
+  
+  
+    &__text-input {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  
+  
+    }
+  
+    &__content {
+      display: flex;
+      flex-direction: column;
+      width: 85%;
+      justify-content: space-between;
+  
+  
+    }
+  
+    &__label {
+      color: #afafaf;
+      font-family: "Avenir regular";
+      font-size: 1rem;
+      font-weight:400;
+      margin-left:7.3vh;
+      @include desktop {
+        margin-left: 5vw;
+      }
+    }
+  
+    &__name {
+      color: #afafaf;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 3vh;
+  
+    }
+  
+    &__text {
+      color: #afafaf;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 5vh;
+      font-size:1rem;
+      font-family:"Avenir Next";
+  
+    }
+  
+    &__button {
+      background-color: #0095ff;
+      color: white;
+      border: none;
+      height: 6vh;
+      border-radius: 1px #e1e1e1;
+       justify-content: end;
+      width: 86%;
+      background-image: url(../../assets/Icons/add_comment.svg);
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-position-x: 0.8rem;
+  
+      @include tablet {
+        width: 30%;
+      }
+  
+      @include desktop {
+        width: 30%;
+      }
+    }
+  
+    &__button-box {
+      display: flex;
+      justify-content: end;
+      margin-top: 2vh;
+  
+      @include desktop {
+        width: 70%;
+      }
+  
+    }
+  }
+  .comments-list {
+    margin:0 5vw;
+    @include desktop {
+     
+      width:1020px;
+      
+      margin:auto;
+    }
+  }
+  
+  .comments {
+    display: flex;
+    border-bottom: 1px solid #e1e1e1;
+    margin: 5vw;
+  
+    @include desktop {
+      width: 70%;
+    }
+    &__detail{
+      border-bottom: 1px solid #E1E1E1;
+    }
+    &__image {
+      width: 3rem;
+      border-radius: 50%;
+      height: 3rem;
+      @include tablet{
+        width:5rem;
+        height:5rem;
+      }
+    }
+    &__image--placeholder {
+        width: 3rem;
+        border-radius: 50%;
+        height: 3rem;
+        margin-right:2vw;
+        @include tablet{
+          width:5rem;
+          height:5rem;
+        }
+      }
+  
+    &__header {
+      display: flex;
+      justify-content: space-around;
+     
+    }
+  
+    &__username {
+      color: #323232;
+      font-family: Avenir demi;
+    }
+  
+    &__date {
+      color: #afafaf;
+      font-family:"Avenir regular";
+    }
+  
+    &__text {
+      color: #323232;
+      font-family: "Avenir regular";
+    }
+  
+    &__content {
+      display:flex;
+    }
+    &__input{
+        display: flex;
+        flex-direction: row;
+    }
+  
+    
+  }
+  
+  
+  
+  

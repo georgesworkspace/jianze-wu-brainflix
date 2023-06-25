@@ -1,6 +1,8 @@
 import avatar from "../../assets/Images/Mohan-muruge.jpg";
-import './RestOfVideo.scss'
-import details from '../../assets/Data/video-details.json'
+import './RestOfVideo.scss';
+import details from '../../assets/Data/video-details.json';
+import view from '../../assets/Icons/views.svg';
+import like from '../../assets/Icons/likes.svg';
 export default function RestofVideo({ currentVideo }) {
 
 
@@ -16,46 +18,58 @@ export default function RestofVideo({ currentVideo }) {
         <div className="main__title--bold">
           <p className="main__title-content">{title}</p>
         </div>
-        <div className="main__subtitle">
+        <div className="main__video-detail">
           <div className="main__subtitle">
+            
             <p className="main__channel">{channel}</p>
             <p className="main__date">{gettodaydate(timestamp)}</p>
           </div>
           <div className="main__viewbar">
+            <div className="main__views-div">
+              <img className="main__views-image" src={view} alt="broken" />
             <p className="main__views">{views}</p>
+            </div> 
+            <div className="main__likes-div">
+              <img  className="main__likes-image"src={like} alt="broken"/>
             <p className="main__likes">{likes}</p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="main__comments">
-        <p className="main__comments-title">3 Comments</p>
-        <div className="main__comments-input">
-          <img className="main__comments-image" src={avatar} />
-          <label className="main__comments-label">
+      <form className="form">
+        <p className="form__title">3 Comments</p>
+        <p className="form__label">
           JOIN THE CONVERSATION
+          </p>
+        <div className="comments__input">
+          <img className="form__image" src={avatar} />
+          
             <input
-              className="main__comments-input"
+              className="form__input-text"
               type="text"
               placeholder="Add a new comment"
             ></input>
             
-          </label>
+          
         </div>
-        <div className="button-div">
-        <button className="main__comments-button">COMMENT</button>
+        <div className="form__button-box">
+        <button className="form__button">COMMENT</button>
         </div>
-      </div>
-      <div className="main__comment-list">
+      </form>
+      <div className="comments-list">
         {comments.map((comment) => {
           return (
-            <div className="main__comment--detail" key={comment.id}>
-              <div className="main__comment-header">
-                <p className="main__comment-username">{comment.name}</p>
-                <p className="main__comment-date">
+            <div className="comments__detail" key={comment.id}>
+              <div className="comments__header">
+                <p className="comments__username">{comment.name}</p>
+                <p className="comments__date">
                   {gettodaydate(comment.timestamp)}
                 </p>
               </div>
-              <p className="main__comment-text">{comment.comment}</p>
+              <div className="comments__content">
+              <img className="comments__image--placeholder" src={avatar} alt="broken"></img>
+              <p className="comments__text">{comment.comment}</p>
+              </div>
             </div>
           );
         })}
