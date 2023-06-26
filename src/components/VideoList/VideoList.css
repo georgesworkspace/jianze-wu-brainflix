@@ -1,3 +1,55 @@
+.Video-List--detail {
+  display: flex;
+}
 .Video-List--detail img {
-  width: 20rem;
+  width: 9rem;
+  max-height: 7.5rem;
+  border-radius: 4px;
+  margin: 1vh 5vw;
+}
+@media (min-width: 1280px) {
+  .Video-List--detail img {
+    margin: 1vh 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .Video-List {
+    margin-right: 45%;
+  }
+}
+@media (min-width: 768px) and (min-width: 1280px) {
+  .Video-List {
+    margin-right: 0;
+  }
+}
+.Video-List--bold {
+  color: #323232;
+  font-family: "Avenir bold";
+  font-size: 1.2rem;
+}
+.Video-List--regular {
+  color: #323232;
+}
+.Video-List-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.Video__header {
+  font-size: 1rem;
+  color: #afafaf;
+  margin-left: 5vw;
+}
+@media (min-width: 1280px) {
+  .Video__header {
+    margin: 0;
+  }
+}
+
+@media (min-width: 1280px) {
+  .Video-div {
+    padding-left: 2vw;
+  }
 }/*# sourceMappingURL=VideoList.css.map */

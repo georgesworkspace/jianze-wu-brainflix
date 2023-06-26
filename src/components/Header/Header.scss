@@ -13,27 +13,43 @@
 
 
 .header {
+  margin-top: 2vh;
+
+  
     @include tablet{
         display:flex;
         flex-direction: row;
-        flex:1;
+        
+        height:10vh;
     }
   &__title {
     display: flex;
     justify-content: center;
-    margin-bottom: 3vh;
+
+    margin: 0 3vh 3vh 7vh;
+    @include tablet{
+      height:50%;
+    }
   }
   &__search {
     display: flex;
     justify-content: space-around   ;
     width:100%;
     margin-bottom: 1.5vh;
+    @include tablet{
+      width:70%;
+    }
+
 
   }
   &__image {
     height: 2.5rem;
     width: 2.5rem;
     border-radius: 50%;
+    @include tablet{
+      height:3rem;
+      width:3rem;
+    }
     
   }
   &__input {
@@ -64,6 +80,9 @@
     background-repeat: no-repeat;
     background-position-y: center;
     background-position-x: .5rem;
+    @include tablet{
+      display: none;
+    }
     &::placeholder {
         padding-top:0.5rem;
     }
@@ -71,9 +90,11 @@
     &__button--hidden {
       display: none;
       @include tablet{
+        display: block;
       background-color: #0095ff;
       color:white;
-      width: 90%;
+      width: 30%;
+      height:40px;
       border-radius: 4px;
       border:none;
       background-image: url("../../assets/Icons/upload.svg");
@@ -83,6 +104,9 @@
       &::placeholder {
           padding-top:0.5rem;
       }
+      @include desktop{
+        height:65px;;
+      }
     }
   }
   &__button-div {
@@ -90,6 +114,7 @@
     height:7vh;
     justify-content: center;
     background-position-y: center;
+    margin: 2vh 0vh;
   
   }
 }

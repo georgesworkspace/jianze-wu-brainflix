@@ -1,0 +1,7 @@
+@use "../src/styles/partials/variables" as *;
+.desktop-grouping{
+    @include desktop{
+     display: flex;
+
+    }
+}
