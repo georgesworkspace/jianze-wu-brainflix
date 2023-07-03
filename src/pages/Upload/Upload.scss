@@ -1,0 +1,22 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+.header{
+
+}
+.title{
+    font-size:3rem;
+    font-family: "Avenir bold";
+    color:#323232;
+    margin: 3vh 0;
+    margin-left:3vh;
+}
+.video{
+    &-text{
+        font-size: 1.2rem;
+        color:#afafaf;
+        font-family: "Avenir bold";
+    }
+    &-image{
+        width:100%;
+    }
+}

@@ -1,21 +1,25 @@
 import logo from "../../assets/Logo/BrainFlix-logo.svg";
-
-import potrait from "../../assets/Images/Mohan-muruge.jpg"
+import { Link } from "react-router-dom";
+import potrait from "../../assets/Images/Mohan-muruge.jpg";
 
 import "./Header.scss";
-function navigation() {
+function Header() {
   return (
     <header className="header">
       <div className="header__title">
-        <img className="header__logo" src={logo} alt="random im" />
+        <Link to={`/`} className="title-link">
+          <img className="header__logo" src={logo} alt="random im" />
+        </Link>
       </div>
       <div className="header__search">
         <input
           className="header__input"
           type="text"
           placeholder="Search"
-        ></input>
-        <button className="header__button--hidden">UPLOAD</button>
+        />
+        <Link to={`/Upload`} className="header__button-container">
+          <button className="header__button--hidden">UPLOAD</button>
+        </Link>
         <img className="header__image" src={potrait} alt="random im" />
       </div>
       <div className="header__button-div">
@@ -24,4 +28,4 @@ function navigation() {
     </header>
   );
 }
-export default navigation;
+export default Header;

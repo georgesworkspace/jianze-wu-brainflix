@@ -1,6 +1,7 @@
 import "./VideoList.scss";
-import videoDetail from "../../assets/Data/video-details.json";
-export default function VideoList({ videos, setCurrentVideo, currentVideo }) {
+
+import { Link } from "react-router-dom";
+export default function VideoList({ videos, currentVideo }) {
   const notSelectedVideo = videos.filter((vid) => vid.id !== currentVideo.id);
   return (
     <>
@@ -9,20 +10,15 @@ export default function VideoList({ videos, setCurrentVideo, currentVideo }) {
         <ul className="Video-List">
           {notSelectedVideo.map((video) => {
             return (
-              <li
-                className="Video-List--detail"
-                key={video.id}
-                onClick={() => {
-                  console.log(video);
-                  setCurrentVideo(video);
-                }}
-              >
-                <img src={video.image} />
+              <li className="Video-List--detail" key={video.id}>
+                <Link to={`/${video.id}`}>
+                  <img src={currentVideo.image} />
 
-                <div className="Video-List-title">
-                  <p className="Video-List--bold">{video.title}</p>
-                  <p className="Video-List--regular">{video.channel}</p>
-                </div>
+                  <div className="Video-List-title">
+                    <p className="Video-List--bold">{currentVideo.title}</p>
+                    <p className="Video-List--regular">{currentVideo.channel}</p>
+                  </div>
+                </Link>
               </li>
             );
           })}

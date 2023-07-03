@@ -1,13 +1,13 @@
 import avatar from "../../assets/Images/Mohan-muruge.jpg";
 import "./RestOfVideo.scss";
-import details from "../../assets/Data/video-details.json";
+// import details from "../../assets/Data/video-details.json";
 import view from "../../assets/Icons/views.svg";
 import like from "../../assets/Icons/likes.svg";
 export default function RestofVideo({ currentVideo }) {
-  const videoDetails = details.find((detail) => detail.id === currentVideo.id);
+  // const videoDetails = details.find((detail) => detail.id === currentVideo.id);
 
   const { comments, channel, timestamp, likes, title, views, description } =
-    videoDetails;
+    currentVideo;
   return (
     <main>
       <div className="main__title">
