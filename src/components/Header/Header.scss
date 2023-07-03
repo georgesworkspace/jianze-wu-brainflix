@@ -12,7 +12,10 @@
 }
 .header {
   margin-top: 2vh;
-
+   @include tablet{
+    border-bottom: 1px solid #afafaf
+    ;
+   }
   
     @include tablet{
         display:flex;
@@ -25,14 +28,14 @@
     justify-content: center;
 
     margin: 0 3vh 3vh 7vh;
-    @include tablet{
+    @include desktop{
       height:50%;
     }
   }
   &__logo{
     @include tablet{
-      width:100%;
-      height:100%;
+      width:60%;
+      height:60%;
     }
     @include desktop{
       width:70%;
@@ -85,7 +88,7 @@
     }
   }
   &__button {
-    background-color: #0095ff;
+    background-color:#0095ff; 
     color:white;
     width: 90%;
     border-radius: 4px;

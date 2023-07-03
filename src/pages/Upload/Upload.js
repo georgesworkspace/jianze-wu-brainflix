@@ -38,33 +38,45 @@ function Upload() {
         </div>
         <div className="form">
           <form onSubmit={handleSubmit}>
-            <label className="video-title">
+            <label className="video-title">TITLE YOUR VIDEO
               <input
                 type="text"
                 placeholder="Add a title to your video"
                 name="video-title"
                 onChange={handleChangeTitle}
                 value={videoTitle}
+                className="title-input"
               />
             </label>
-            <label className="video-description">
+            <label className="video-description">  ADD A VIDEO DESCRIPTION
               <input
                 type="text"
                 placeholder="Add a descritption to your video"
                 name="video-description"
                 onChange={handleChangeDescription}
                 value={videoDescription}
+                className="description-input"
               />
             </label>
             <div className="button-div">
-              <button className="button-cancel" onClick={handleClick}>
-                cancel
-              </button>
+       
               <button className="button-upload" type="submit">
-                upload
+                PUBLISH
+              </button>
+              <button className="button-cancel" onClick={handleClick}>
+                CANCEL
               </button>
             </div>
           </form>
+          <div className="button-div--hidden">
+       
+       <button className="button-upload--hidden" type="submit">
+         PUBLISH
+       </button>
+       <button className="button-cancel--hidden" onClick={handleClick}>
+         CANCEL
+       </button>
+     </div>
         </div>
       </section>
     </>
