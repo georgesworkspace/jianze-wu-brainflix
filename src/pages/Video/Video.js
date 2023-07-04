@@ -50,7 +50,7 @@ function Video() {
     }
   }, [id]);
 
-  if (!videos) {
+  if (!videos || !currentVideo) {
     return <>...Loading...</>;
   }
   return (
