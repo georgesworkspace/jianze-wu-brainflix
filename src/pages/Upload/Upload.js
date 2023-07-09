@@ -21,8 +21,19 @@ function Upload() {
   const handleSubmit = (event) => {
     event.preventDefault();
     alert("success");
+
+    axios
+    .post('http://localhost:8080/videos', {title: videoTitle,description:videoDescription})
+    .then((response) => {
+console.log('ok')
+    }).catch(() => {
+      console.log('oh no')
+    });
+
+
     navigate(`/`);
   };
+
 
   return (
     <>
