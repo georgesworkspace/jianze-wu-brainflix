@@ -11,12 +11,12 @@ export default function VideoList({ videos, currentVideo }) {
           {notSelectedVideo.map((video) => {
             return (
               <li className="Video-List--detail" key={video.id}>
-                <Link to={`/${video.id}`}>
-                  <img src={currentVideo.image} />
+                <Link to={`/${video.id}`} className="Video-List--link">
+                  <img src={video.image} />
 
                   <div className="Video-List-title">
-                    <p className="Video-List--bold">{currentVideo.title}</p>
-                    <p className="Video-List--regular">{currentVideo.channel}</p>
+                    <p className="Video-List--bold">{video.title}</p>
+                    <p className="Video-List--regular">{video.channel}</p>
                   </div>
                 </Link>
               </li>
