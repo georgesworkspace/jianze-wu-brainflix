@@ -38,11 +38,11 @@ export default function RestofVideo({ currentVideo }) {
         <div className="form__input">
           <img className="form__image" src={avatar} />
 
-          <input
+          <textarea
             className="form__input-text"
             type="text"
             placeholder="Add a new comment"
-          ></input>
+          ></textarea>
           <button className="form__button--hidden">COMMENT</button>
         </div>
         <div className="form__button-box">
@@ -60,11 +60,10 @@ export default function RestofVideo({ currentVideo }) {
                 </p>
               </div>
               <div className="comments__content">
-                <img
+                <article
                   className="comments__image--placeholder"
-                  src={avatar}
-                  alt="broken"
-                ></img>
+                 
+                ></article>
                 <p className="comments__text">{comment.comment}</p>
               </div>
             </div>

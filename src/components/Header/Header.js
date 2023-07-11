@@ -23,7 +23,7 @@ function Header() {
         <img className="header__image" src={potrait} alt="random im" />
       </div>
       <div className="header__button-div">
-        <button className="header__button">UPLOAD</button>
+      <Link to={`/Upload`}className="header__button"> <button className="header__button">UPLOAD</button>     </Link>
       </div>
     </header>
   );

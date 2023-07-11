@@ -3,6 +3,7 @@ import uploadimage from "../../assets/Images/Upload-video-preview.jpg";
 import "./Upload.scss";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Upload() {
   const [videoTitle, setVideoTitle] = useState("");
@@ -47,10 +48,10 @@ console.log('ok')
           <p className="video-text">VIDEO THUMBNAIL</p>
           <img className="video-image" src={uploadimage} />
         </div>
-        <div className="form">
+        <div className="form-upload">
           <form onSubmit={handleSubmit}>
             <label className="video-title">TITLE YOUR VIDEO
-              <input
+              <textarea
                 type="text"
                 placeholder="Add a title to your video"
                 name="video-title"
@@ -60,7 +61,7 @@ console.log('ok')
               />
             </label>
             <label className="video-description">  ADD A VIDEO DESCRIPTION
-              <input
+              <textarea
                 type="text"
                 placeholder="Add a descritption to your video"
                 name="video-description"

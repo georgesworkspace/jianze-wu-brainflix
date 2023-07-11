@@ -6,7 +6,7 @@
     width: 9rem;
     max-height:7.5rem;
     border-radius: 4px;
-    margin: 1vh 5vw;
+    margin: 1rem 5rem;
     @include desktop{
         margin: 1vh 0;
     }
@@ -23,21 +23,35 @@
     color: #323232;
     font-family: "Avenir bold";
     font-size: 1.2rem;
+    margin-left: 5rem;
    
   }
   &--regular {
     color: #323232;
+    margin-left: 5rem;
   }
   &-title{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
   }
+  &--link{
+    text-decoration: none;
+    @include tablet{
+      margin-right: 45%;
+      @include desktop {
+          margin-right:0;
+      }
+  }
+  }
 }
 .Video__header{
     font-size:1rem;
     color: #afafaf;
-    margin-left: 5vw;
+    margin-left: 5rem;
+    @include tablet{
+
+    }
     @include desktop{
         margin:0;
     }
@@ -45,6 +59,6 @@
 }
 .Video-div{
 @include desktop{
-   padding-left:2vw;
+   padding-left:2rem;
 }
 }
